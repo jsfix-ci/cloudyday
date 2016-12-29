@@ -50,4 +50,11 @@ The Server itself is defined in `/server` and defines pretty much everything abo
 
 Tests are located inside `/test`.
 
-Written by *zephinzer* and licensed under GPLv3.
+## Contribution Process
+
+Just fork and submit a pull request if you wish documenting what features you added.
+Thanks!
+
+## Contributers
+
+Initially written by *zephinzer* and licensed under GPLv3.
