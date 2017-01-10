@@ -22,12 +22,12 @@ FontAwesome is also included for ease of using icons.
 
 ### Code Quality
 
-ESLint is included. Run ESLint test with `npm run eslint`.
+ESLint is included. Run ESLint test with `npm run test-eslint`.
 
 ### Quality Assurance
 
 Mocha, Chai, Enzyme and Karma are used. Nightwatch should be on the way for feature 
-testing. Run Mocha tests with `npm run test`.
+testing. Run Mocha tests with `npm run test-mocha`.
 
 ### DevOps
 
@@ -66,13 +66,13 @@ To use Sequelize use `npm run sequelize <SEQUELIZE-CLI-COMMAND HERE>`.
 If using additional flags like `--name`, add a `--` prefix to the command so that 
 flags can be picked up. Example: `npm run sequelize -- model:create --name NewModelName`
 
-To test the application using Mocha use `npm run test`.
+To test the application using Mocha use `npm run test-mocha`.
 
-To check code quality using ESLint use `npm run eslint`.
-
-To run all tests and code quality checks use `npm run verify`.
+To check code quality using ESLint use `npm run test-eslint`.
 
 To build the application, run `npm run build`. 
+
+To run all tests, code quality checks and build process use `npm test`.
 
 ## Developing on CloudyDay
 
