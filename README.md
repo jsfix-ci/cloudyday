@@ -58,3 +58,12 @@ Thanks!
 ## Contributers
 
 Initially written by *zephinzer* and licensed under GPLv3.
+
+## Changelog
+### 0.0.2
+- Added JSON folder into `/assets` for static drawing of information
+- Added proper ESLint rules
+- Added ESLint ignore file for bundled assets
+
+### 0.0.1
+Initial commit
