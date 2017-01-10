@@ -20,6 +20,7 @@ Server.use('/api', Api);
 Server.get('/', function(req, res) {
 	res.render('index', {
 		applicationTitle: CONST.META.DISPLAY_NAME,
+		applicationVersion: CONST.META.VERSION,
 		webpackBundle: CONST.URL.WEBPACK[CONST.ENV] + CONST.PATH.ASSETS + `/${CONST.PATH.BUNDLE_FILENAME}`
 	});
 });
