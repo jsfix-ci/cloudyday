@@ -1,0 +1,8 @@
+#!/bin/sh
+# # Add your own checkers here, the following comment checks for an enviornment
+# # variable named IS_HEROKU and if present, runs it. Uncomment for effect.
+# if [ ${IS_HEROKU:+0} ]
+# then
+echo 'POST-INSTALL SCRIPT'
+echo "PWD: `pwd`"
+# fi

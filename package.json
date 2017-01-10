@@ -1,15 +1,33 @@
 {
   "name": "cloudyday",
+	"displayName": "Cloudy Day",
   "version": "0.0.2",
   "description": "All ideas no execution: A seeder file for quick setting up of a React web-application.",
   "main": "index.js",
+  "engines": {
+    "node": "6.9.2"
+  },
+  "author": "Joseph Matthias Goh <hello-at-joeir-dot-net>",
+	"contributers": [
+		{
+			"name": "Joseph Matthias Goh",
+			"email": "hello-at-joeir-dot-net"
+		}
+	],
+  "license": "GPL-3.0",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/zephinzer/cloudyday"
+	},
   "scripts": {
     "build": "NODE_ENV=production node .bin/build.js",
     "dev": "NODE_ENV=development node index.js",
     "eslint": "node_modules/.bin/eslint .",
     "migrate": "npm run sequelize db:migrate",
+    "preinstall": "./.bin/pre-install",
+    "postinstall": "./.bin/post-install",
     "seed": "npm run sequelize db:seed:all",
-    "sequelize": "node_modules/.bin/sequelize --config './config/sequelize.config.json'",
+    "sequelize": "node_modules/.bin/sequelize --config './config/sequelize.config.js'",
     "start": "NODE_ENV=production node index.js",
     "test": "node_modules/.bin/mocha ./test",
     "unmigrate": "npm run sequelize db:migrate:undo",
@@ -17,10 +35,6 @@
     "update": "./.bin/update",
     "verify": "npm run test && npm run eslint"
   },
-  "authors": [
-    "Joseph Matthias Goh"
-  ],
-  "license": "GPL-3.0",
   "dependencies": {
     "babel-core": "^6.21.0",
     "babel-loader": "^6.2.10",

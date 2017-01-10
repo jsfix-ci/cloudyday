@@ -1,0 +1,11 @@
+#!/bin/sh
+echo This script will run 'yarn install' and 'bower install' to update dependencies.
+echo Now sleeping for 3 seconds. Hit ctrl+c to terminate if wrongly started.
+sleep 1
+echo .
+sleep 1
+echo .
+sleep 1
+echo Beginning dependency installation...
+yarn install && bower install
+echo The Deed is Done\(:
