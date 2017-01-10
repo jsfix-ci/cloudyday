@@ -21,7 +21,7 @@ Server.use(environmentDependentMiddleware);
 Server.use('/assets', express.static(path.join(CONST.PATH.PROCESS, CONST.PATH.ASSETS)));
 Server.use(bodyParser.json());
 Server.use(bodyParser.urlencoded({ extended: true }));
-Server.use(cookieParser('makesmth4981023992'));
+Server.use(cookieParser('cloudydaymd5:2c5610e86049a041918c70301d3e12db'));
 Server.use('/api', Api);
 Server.get('/', function(req, res) {
 	res.render('index', {
