@@ -11,9 +11,23 @@ describe(`${packageDetails.name} v${packageDetails.version}`, () => {
 		it('a seeder application for a React app', () => {
 			expect(packages.npm.dependencies['react']).to.not.be.undefined;
 		});
+		it('dependent on Node v6.9.2 LTS', () => {
+			expect(packages.npm.engines['node']).to.equal('6.9.2');
+		});
 		it('written by zephinzer out of frustration at the hassle needed to setup a React app', () => {
-			expect(packages.npm.author).to.contain('zephinzer');
+			expect(packages.npm.contributors[0].name).to.contain('zephinzer');
 			expect(packages.bower.authors[0]).to.contain('zephinzer');
+		});
+		it('licensed under the GPLv3 license', () => {
+			expect(packages.npm.license).to.equal('GPL-3.0');
+		});
+	});
+	context('can', () => {
+		it('be found at https://github.com/zephinzer/cloudyday', () => {
+			expect(packages.npm.repository.url).to.equal('https://github.com/zephinzer/cloudyday');
+		});
+		it('be cloned by running `git clone git@github.com:zephinzer/cloudyday.git .`', () => {
+			expect(packages.npm.repository.type).to.equal('git');
 		});
 	});
 	context('which includes utility tools using', () => {
@@ -132,6 +146,7 @@ describe(`${packageDetails.name} v${packageDetails.version}`, () => {
 		});
 	});
 	context('will someday... (roadmap)', () => {
+		it('be using Bootstrap 4 when FlexBox is a base feature');
 		it('be able to run feature tests (Nightwatch)');
 		it('be able to run indefinitely using a process manager (PM2)');
 	});
