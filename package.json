@@ -27,7 +27,7 @@
     "preinstall": "./.bin/pre-install",
     "postinstall": "./.bin/post-install",
     "seed": "npm run sequelize db:seed:all",
-    "sequelize": "node_modules/.bin/sequelize --config './config/sequelize.config.js'",
+    "sequelize": "node_modules/.bin/sequelize -- --config './config/sequelize.config.js'",
     "start": "NODE_ENV=production node index.js",
     "test": "node_modules/.bin/mocha ./test",
     "unmigrate": "npm run sequelize db:migrate:undo",
