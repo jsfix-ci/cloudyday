@@ -38,7 +38,7 @@ This seeder defines 3 environments: `production`, `test` and `development`.
 ## Getting Started
 
 ### Project Initialisation
-Clone the repository from git@github.com:zephinzer/cloudyday.git.
+Clone the repository from `git@github.com:zephinzer/cloudyday.git`.
 
 Change package information in `package.json` and `bower.json` for your own product.
 
