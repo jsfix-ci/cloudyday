@@ -16,7 +16,7 @@ testing. Run Mocha tests with `npm run test`.
 
 ### DevOps
 
-This seeder defines 3 environments: `production`, `ciserver` and `development`. 
+This seeder defines 3 environments: `production`, `test` and `development`. 
 
 ## Getting Started
 
@@ -26,7 +26,17 @@ To run the application in `production` use `npm start`.
 
 To run the application in `development` use `npm run dev`.
 
+To setup the database for development, run `npm run db-setup-dev`. This needs to be 
+run the first time to initialise the database.
+
+To tear down the database for development, run `npm run db-teardown-dev`. This is
+useful because Sequelize's removal of seeders does not work as expected sometimes. 
+When that happens, run this script followed by `npm run db-setup-dev` to restore the 
+base state.
+
 To use Sequelize use `npm run sequelize <SEQUELIZE-CLI-COMMAND HERE>`.
+If using additional flags like `--name`, add a `--` prefix to the command so that 
+flags can be picked up. Example: `npm run sequelize -- model:create --name NewModelName`
 
 To test the application using Mocha use `npm run test`.
 
@@ -61,6 +71,9 @@ Initially written by *zephinzer* and licensed under GPLv3.
 
 ## Changelog
 ### 0.0.2
+- Adds FontAwesome package to default Bower packages and MaterialUI to Yarn packages
+- Adds applicationTitle and applicationVersion to front-end
+- Adds seed Sequelize data and associated scripts
 - Adding API harvesting feature, files inside `/api` will now automatically map
   to the corresponding filename. For example, the file `/api/example.js` will map to
 	the endpoint `/api/example`.

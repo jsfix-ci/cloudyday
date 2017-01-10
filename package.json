@@ -7,7 +7,7 @@
  "engines": {
   "node": "6.9.2"
  },
- "author": "Joseph Matthias Goh <hello-at-joeir-dot-net>",
+ "author": "zephinzer <hello-at-joeir-dot-net>",
  "contributors": [
   {
    "name": "Joseph Matthias Goh",
@@ -27,9 +27,9 @@
   "preinstall": "./.bin/pre-install",
   "postinstall": "./.bin/post-install",
   "seed": "npm run sequelize db:seed:all",
-  "sequelize": "node_modules/.bin/sequelize -- --config './config/sequelize.config.js'",
+  "sequelize": "node_modules/.bin/sequelize --config './config/sequelize.config.js'",
   "start": "NODE_ENV=production node index.js",
-  "test": "node_modules/.bin/mocha ./test",
+  "test": "NODE_ENV=test node_modules/.bin/mocha ./test",
   "unmigrate": "npm run sequelize db:migrate:undo",
   "unseed": "npm run sequelize db:seed:undo:all",
   "update": "./.bin/update",
