@@ -17,8 +17,9 @@ Server.use(loggingMechanismMiddleware);
 Server.use(environmentDependentMiddleware);
 Server.use('/assets', express.static(path.join(CONST.PATH.PROCESS, CONST.PATH.ASSETS)));
 Server.use('/api', Api);
-Server.get('/', function(req, res, next) {
+Server.get('/', function(req, res) {
 	res.render('index', {
+		applicationTitle: CONST.META.DISPLAY_NAME,
 		webpackBundle: CONST.URL.WEBPACK[CONST.ENV] + CONST.PATH.ASSETS + `/${CONST.PATH.BUNDLE_FILENAME}`
 	});
 });
