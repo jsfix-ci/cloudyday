@@ -70,7 +70,12 @@ Thanks!
 Initially written by *zephinzer* and licensed under GPLv3.
 
 ## Changelog
+### 0.0.3
+
+- Adds ReactStrap package and associated dependencies
+
 ### 0.0.2
+
 - Adds FontAwesome package to default Bower packages and MaterialUI to Yarn packages
 - Adds applicationTitle and applicationVersion to front-end
 - Adds seed Sequelize data and associated scripts
@@ -83,4 +88,5 @@ Initially written by *zephinzer* and licensed under GPLv3.
 - Added ESLint ignore file for bundled assets
 
 ### 0.0.1
-Initial commit
+
+- Initial commit
