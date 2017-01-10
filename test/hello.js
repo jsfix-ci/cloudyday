@@ -140,14 +140,14 @@ describe(`${packageDetails.name} v${packageDetails.version}`, () => {
 		it('npm run dev         : starts application in `development` environment', () => {
 			expect(packages.npm.scripts['dev']).to.not.be.undefined;
 		});
-		it('npm run eslint      : runs ESLint on *.js', () => {
-			expect(packages.npm.scripts['eslint']).to.not.be.undefined;
-		});
 		it('npm run migrate     : runs Sequelize migration for all migrations in /migrations', () => {
 			expect(packages.npm.scripts['migrate']).to.not.be.undefined;
 		});
-		it('npm run postinstall : runs ESLint on *.js', () => {
-			expect(packages.npm.scripts['eslint']).to.not.be.undefined;
+		it('npm run postinstall : runs post-install scripts', () => {
+			expect(packages.npm.scripts['postinstall']).to.not.be.undefined;
+		});
+		it('npm run preinstall  : runs pre-install scripts', () => {
+			expect(packages.npm.scripts['preinstall']).to.not.be.undefined;
 		});
 		it('npm run seed        : runs all Sequelize seeders in /seeders', () => {
 			expect(packages.npm.scripts['seed']).to.not.be.undefined;
@@ -158,8 +158,11 @@ describe(`${packageDetails.name} v${packageDetails.version}`, () => {
 		it('npm start           : starts application in `production` environment', () => {
 			expect(packages.npm.scripts['start']).to.not.be.undefined;
 		});
-		it('npm run test        : runs all Mocha tests in ./test', () => {
-			expect(packages.npm.scripts['test']).to.not.be.undefined;
+		it('npm run test-eslint : runs ESLint on *.js', () => {
+			expect(packages.npm.scripts['test-eslint']).to.not.be.undefined;
+		});
+		it('npm run test-mocha  : runs all Mocha tests in ./test', () => {
+			expect(packages.npm.scripts['test-mocha']).to.not.be.undefined;
 		});
 		it('npm run unmigrate   : reverses most recent Sequelize migration in /migrations', () => {
 			expect(packages.npm.scripts['unmigrate']).to.not.be.undefined;
@@ -170,8 +173,8 @@ describe(`${packageDetails.name} v${packageDetails.version}`, () => {
 		it('npm run update      : installs bower and npm dependencies', () => {
 			expect(packages.npm.scripts['update']).to.not.be.undefined;
 		});
-		it('npm run verify      : runs all Mocha and ESLint tests', () => {
-			expect(packages.npm.scripts['verify']).to.not.be.undefined;
+		it('npm test            : runs all Mocha and ESLint tests', () => {
+			expect(packages.npm.scripts['test']).to.not.be.undefined;
 		});
 	});
 	context('will someday... (roadmap)', () => {
