@@ -61,6 +61,10 @@ Initially written by *zephinzer* and licensed under GPLv3.
 
 ## Changelog
 ### 0.0.2
+- Adding API harvesting feature, files inside `/api` will now automatically map
+  to the corresponding filename. For example, the file `/api/example.js` will map to
+	the endpoint `/api/example`.
+- Removing `/assets/bundle.*` from repository (use `npm run build` to create it)
 - Added JSON folder into `/assets` for static drawing of information
 - Added proper ESLint rules
 - Added ESLint ignore file for bundled assets
