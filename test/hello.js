@@ -33,20 +33,29 @@ describe(`${packageDetails.name} v${packageDetails.version}`, () => {
 	context('which includes utility tools using', () => {
 		it('MomentJS for handling of time/dates', () => {
 			expect(packages.npm.dependencies['moment']).to.not.be.undefined;
+			expect((() => { require('moment'); })()).to.not.throw;
 		});
 	});
 	context('which includes back-end server tools using', () => {
 		it('ExpressJS for handling of routes/controllers', () => {
 			expect(packages.npm.dependencies['express']).to.not.be.undefined;
+			expect((() => { require('express'); })()).to.not.throw;
 		});
 		it('BodyParser for parsing of data from HTTP request body', () => {
 			expect(packages.npm.dependencies['body-parser']).to.not.be.undefined;
+			expect((() => { require('body-parser'); })()).to.not.throw;
+		});
+		it('CookieParser for parsing of cookies from HTTP request', () => {
+			expect(packages.npm.dependencies['cookie-parser']).to.not.be.undefined;
+			expect((() => { require('cookie-parser'); })()).to.not.throw;
 		});
 		it('Embedded JavaScript (EJS) for rendering of base page to inject server-side elements', () => {
 			expect(packages.npm.dependencies['ejs']).to.not.be.undefined;
+			expect((() => { require('ejs'); })()).to.not.throw;
 		});
 		it('JSON Web Tokens for REST API authentication', () => {
 			expect(packages.npm.dependencies['jsonwebtoken']).to.not.be.undefined;
+			expect((() => { require('jsonwebtoken'); })()).to.not.throw;
 		});
 	});
 	context('which includes UI tools using', () => {
@@ -79,22 +88,34 @@ describe(`${packageDetails.name} v${packageDetails.version}`, () => {
 		it('use Mocha (with Chai) for running back-end unit tests on application', () => {
 			expect(packages.npm.dependencies['mocha']).to.not.be.undefined;
 			expect(packages.npm.dependencies['chai']).to.not.be.undefined;
+			expect((() => { require('mocha'); })()).to.not.throw;
+			expect((() => { require('chai'); })()).to.not.throw;
 		});
 		it('use Karma to run front-end unit tests on application', () => {
 			expect(packages.npm.dependencies['karma']).to.not.be.undefined;
+			expect((() => { require('karma'); })()).to.not.throw;
 		});
 		it('use Enzyme to perform unit tests on React components', () => {
 			expect(packages.npm.dependencies['enzyme']).to.not.be.undefined;
+			expect((() => { require('enzyme'); })()).to.not.throw;
 		});
 	});
 	context('which includes devops tools and we', () => {
+		it('use Cron for running of cleanup scripts', () => {
+			expect(packages.npm.dependencies['cron']).to.not.be.undefined;
+			expect((() => { require('cron'); })()).to.not.throw;
+		});
 		it('use Morgan + Winston for handling of logging', () => {
 			expect(packages.npm.dependencies['morgan']).to.not.be.undefined;
+			expect((() => { require('morgan'); })()).to.not.throw;
 			expect(packages.npm.dependencies['winston']).to.not.be.undefined;
+			expect((() => { require('winston'); })()).to.not.throw;
+			
 		});
 		it('use Sequelize (and Sequelize CLI) for database schema versioning/management', () => {
 			expect(packages.npm.dependencies['sequelize']).to.not.be.undefined;
 			expect(packages.npm.dependencies['sequelize-cli']).to.not.be.undefined;
+			expect((() => { require('sequelize'); })()).to.not.throw;
 		});
 		it('use Babel for transpiliation of ES6 code to ES5', () => {
 			expect(packages.npm.dependencies['babel-core']).to.not.be.undefined;
@@ -109,6 +130,7 @@ describe(`${packageDetails.name} v${packageDetails.version}`, () => {
 		});
 		it('use Webpack to build your React application', () => {
 			expect(packages.npm.dependencies['webpack']).to.not.be.undefined;
+			expect((() => { require('webpack'); })()).to.not.throw;
 		});
 	});
 	context('has convenience npm commands like', () => {
