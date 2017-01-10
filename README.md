@@ -35,11 +35,18 @@ This seeder defines 3 environments: `production`, `test` and `development`.
 
 ## Getting Started
 
-Install NPM modules using `yarn install` or `npm install`.
+### Project Initialisation
+Clone the repository from git@github.com:zephinzer/cloudyday.git.
 
-To run the application in `production` use `npm start`.
+Change package information in `package.json` and `bower.json` for your own product.
 
-To run the application in `development` use `npm run dev`.
+Create a repo of your own and change the remote so you'll be pushing to your own 
+repository. This can be done with: `git remote remove origin master` followed by 
+`git remote add origin <repo-url>`.
+
+### Project Setup
+
+Install all modules using `npm run update`.
 
 To setup the database for development, run `npm run db-setup-dev`. This needs to be 
 run the first time to initialise the database.
@@ -48,6 +55,10 @@ To tear down the database for development, run `npm run db-teardown-dev`. This i
 useful because Sequelize's removal of seeders does not work as expected sometimes. 
 When that happens, run this script followed by `npm run db-setup-dev` to restore the 
 base state.
+
+To run the application in `production` use `npm start`.
+
+To run the application in `development` use `npm run dev`.
 
 To use Sequelize use `npm run sequelize <SEQUELIZE-CLI-COMMAND HERE>`.
 If using additional flags like `--name`, add a `--` prefix to the command so that 
