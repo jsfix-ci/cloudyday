@@ -59,9 +59,16 @@ describe(`${packageDetails.name} v${packageDetails.version}`, () => {
 		it('FontAwesome for easy icon insertion', () => {
 			expect(packages.bower.dependencies['font-awesome']).to.not.be.undefined;
 		});
+		it('React transition groups for doing animations', () => {
+			expect(packages.npm.dependencies['react-addons-transition-group']).to.not.be.undefined;
+			expect(packages.npm.dependencies['react-addons-css-transition-group']).to.not.be.undefined;
+		});
 		it('Material UI for easy prototyping using pre-made React components', () => {
 			expect(packages.npm.dependencies['material-ui']).to.not.be.undefined;
 			expect(packages.npm.dependencies['react-tap-event-plugin']).to.not.be.undefined;
+		});
+		it('Reactstrap for an alternative to easy prototyping using pre-made React components', () => {
+			expect(packages.npm.dependencies['reactstrap']).to.not.be.undefined;
 		});
 	});
 	context('which includes quality assurance tools and we', () => {
