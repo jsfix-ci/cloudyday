@@ -5,17 +5,25 @@
  */
 const express = require('express');
 
-const utility = require('./.utility');
-
 /**
  * -----------------------------------------------------------------------------------
  * Code
  * -----------------------------------------------------------------------------------
  */
-const API = express.Router();
+const Example = express.Router();
 
-/// [BEGIN] get all possible endpoints within /api folder and use them as endpoints
-utility.harvestEndpoints(__dirname, __filename, API);
-/// [ENDOF] get all possible endpoints within /api folder and use them as endpoints
+/// insert your code here (example follows)
+/// access this via http://localhost:33337/api/example/hello
+Example.use('/:requestParams', (req, res) => {
+	const parameters = {
+		query: req.query,
+		params: req.params,
+		body: req.body
+	};
+	res.json({
+		endpoint: `/${req.params.requestParams}`,
+		parameters
+	});
+});
 
-module.exports = API;
+module.exports = Example;
