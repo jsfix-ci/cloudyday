@@ -11,7 +11,7 @@ Output.data = {
 		filename: CONST.PATH.BUNDLE_FILENAME,
 		path: path.join(CONST.PATH.PROCESS, CONST.PATH.ASSETS)
 	},
-	ciserver: {
+	test: {
 		filename: CONST.PATH.BUNDLE_FILENAME,
 		path: path.join(CONST.PATH.PROCESS, CONST.PATH.ASSETS)
 	},

@@ -16,7 +16,7 @@ Loaders.data = {
 			loaders: ['style', 'css']
 		}
 	],
-	ciserver: [
+	test: [
 		{
 			test: /\.js$/,
 			exclude: /node_modules/,

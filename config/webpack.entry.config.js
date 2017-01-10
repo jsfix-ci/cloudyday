@@ -10,7 +10,7 @@ Entry.data = {
 	production: [
 		path.join(CONST.PATH.PROCESS, CONST.PATH.WEBVIEW)
 	],
-	ciserver: [
+	test: [
 		path.join(CONST.PATH.PROCESS, CONST.PATH.WEBVIEW)
 	],
 	development: [

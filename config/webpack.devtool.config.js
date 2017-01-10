@@ -6,7 +6,7 @@ function Devtool() {
 
 Devtool.data = {
 	production: 'source-map',
-	ciserver: 'source-map',
+	test: 'source-map',
 	development: null
 };
 

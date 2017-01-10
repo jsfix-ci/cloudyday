@@ -15,7 +15,7 @@ module.exports = {
 			plugins
 		};
 	},
-	ciserver: function() {
+	test: function() {
 		return {
 			devtool,
 			entry,

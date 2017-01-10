@@ -5,7 +5,7 @@ function DevServer() {
 };
 DevServer.data = {
 	production: null,
-	ciserver: null,
+	test: null,
 	development: {
 		contentBase: `.${CONST.PATH.ASSETS}`,
 		headers: { "Access-Control-Allow-Origin": `${CONST.URL.APPLICATION[CONST.ENV]}` },

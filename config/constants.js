@@ -60,7 +60,7 @@ CONST.URL = 		{
 									 **/
 									APPLICATION: {
 										production: `http://localhost:${CONST.PORT.APPLICATION}`,
-										ciserver: `http://localhost:${CONST.PORT.APPLICATION}`,
+										test: `http://localhost:${CONST.PORT.APPLICATION}`,
 										development: `http://localhost:${CONST.PORT.APPLICATION}`
 									},
 									/**
@@ -68,7 +68,7 @@ CONST.URL = 		{
 									 **/
 									WEBPACK: {
 										production: `http://localhost:${CONST.PORT.APPLICATION}`,
-										ciserver: `http://localhost:${CONST.PORT.WEBPACK}`,
+										test: `http://localhost:${CONST.PORT.WEBPACK}`,
 										development: `http://localhost:${CONST.PORT.WEBPACK}`
 									}
 								};
