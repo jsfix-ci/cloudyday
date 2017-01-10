@@ -6,6 +6,10 @@ const CONST = 	{};
 CONST.ENV = 		process.env.NODE_ENV || 'development';
 CONST.META = 		{
 									/**
+									 * Retrieves package displayName from package.json
+									 **/
+									DISPLAY_NAME: packageDetails.displayName,
+									/**
 									 * Retrieves package name from package.json
 									 **/
 									NAME: packageDetails.name,
