@@ -28,7 +28,7 @@ const LoggingMechanism = new winston.Logger({
 	transports, exitOnError
 });
 LoggingMechanism.stream = {
-	write: (message, encoding) => {
+	write: (message) => {
 		(CONST.ENV === 'development') && LoggingMechanism.info(message);
 	}
 };
