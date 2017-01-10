@@ -5,6 +5,19 @@ to test out with some React. Clone it, install dependencies and you're good to g
 
 ## What's Inside
 
+### Server Management
+
+We use ExpressJS for the server.
+
+### UI Tools
+
+ReactStrap and Material UI is included depending on which suits your use case.
+
+ReactStrap URL: https://reactstrap.github.io/
+MaterialUI URL: http://www.material-ui.com/
+
+FontAwesome is also included for ease of using icons.
+
 ### Code Quality
 
 ESLint is included. Run ESLint test with `npm run eslint`.
@@ -15,6 +28,8 @@ Mocha, Chai, Enzyme and Karma are used. Nightwatch should be on the way for feat
 testing. Run Mocha tests with `npm run test`.
 
 ### DevOps
+
+Cron scripts allowing for periodic running of scripts are available in `/cron`.
 
 This seeder defines 3 environments: `production`, `test` and `development`. 
 
@@ -73,6 +88,7 @@ Initially written by *zephinzer* and licensed under GPLv3.
 ### 0.0.3
 
 - Adds ReactStrap package and associated dependencies
+- Adds Cron script support in folder `/cron` to run cleanup scripts
 
 ### 0.0.2
 
