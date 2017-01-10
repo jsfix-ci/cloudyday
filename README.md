@@ -1,5 +1,7 @@
 # CloudyDay
 
+[![Build Status](https://travis-ci.org/zephinzer/cloudyday.svg?branch=master)](https://travis-ci.org/zephinzer/cloudyday)
+
 A React seeder app for my own convenience so that I can just clone this whenever I need
 to test out with some React. Clone it, install dependencies and you're good to go.
 
