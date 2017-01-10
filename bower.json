@@ -1,0 +1,18 @@
+{
+  "name": "cloudyday",
+	"version": "0.0.2",
+  "description": "All ideas no execution: A seeder file for quick setting up of a React web-application.",
+  "main": "index.js",
+  "authors": [
+    "Joseph Matthias Goh"
+  ],
+  "license": "GPL-3.0",
+  "homepage": "https://github.com/zephinzer/cloudyday",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
