@@ -141,6 +141,10 @@ describe(`${packageDetails.name} v${packageDetails.version}`, () => {
 			expect(packages.npm.dependencies['webpack']).to.not.be.undefined;
 			expect((() => { require('webpack'); })()).to.not.throw;
 		});
+		it('include ability to include *.css files via Webpack', () => {
+			expect(packages.npm.dependencies['style-loader']).to.not.be.undefined;
+			expect(packages.npm.dependencies['css-loader']).to.not.be.undefined;
+		});
 	});
 	context('has convenience npm commands like', () => {
 		it('npm run build       : runs a webpack build', () => {
