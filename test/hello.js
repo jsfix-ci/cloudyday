@@ -65,6 +65,11 @@ describe(`${packageDetails.name} v${packageDetails.version}`, () => {
 		it('React-Router for the front-end routing', () => {
 			expect(packages.npm.dependencies['react-router']).to.not.be.undefined;
 		});
+		it('React-Redux with Redux-Saga for front-end data management', () => {
+			expect(packages.npm.dependencies['redux']).to.not.be.undefined;
+			expect(packages.npm.dependencies['react-redux']).to.not.be.undefined;
+			expect(packages.npm.dependencies['redux-saga']).to.not.be.undefined;
+		});
 		it('FontAwesome for easy icon insertion', () => {
 			expect(packages.bower.dependencies['font-awesome']).to.not.be.undefined;
 		});
@@ -117,6 +122,10 @@ describe(`${packageDetails.name} v${packageDetails.version}`, () => {
 			expect(packages.npm.dependencies['sequelize-cli']).to.not.be.undefined;
 			expect((() => { require('sequelize'); })()).to.not.throw;
 		});
+		it('use MySQL as the SQL dialect to use with Sequelize', () => {
+			expect(packages.npm.dependencies['mysql']).to.not.be.undefined;
+			expect((() => { require('mysql'); })()).to.not.throw;
+		})
 		it('use Babel for transpiliation of ES6 code to ES5', () => {
 			expect(packages.npm.dependencies['babel-core']).to.not.be.undefined;
 			expect(packages.npm.dependencies['babel-loader']).to.not.be.undefined;

@@ -98,6 +98,11 @@ Thanks!
 Initially written by *zephinzer* and licensed under GPLv3.
 
 ## Changelog
+
+### 0.0.4
+- Adds in MySQL for Sequelize 
+- Adds in required Redux and Redux-Saga libraries
+
 ### 0.0.3
 
 - Adds ReactStrap package and associated dependencies
