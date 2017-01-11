@@ -21,6 +21,8 @@
  },
  "scripts": {
   "build": "NODE_ENV=production node .bin/build.js",
+	"db-setup-dev": "./.bin/db-setup-dev",
+	"db-teardown-dev": "./.bin/db-teardown-dev",
   "dev": "NODE_ENV=development node index.js",
   "migrate": "npm run sequelize db:migrate",
   "preinstall": "./.bin/pre-install",
