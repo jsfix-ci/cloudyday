@@ -100,6 +100,8 @@ Initially written by *zephinzer* and licensed under GPLv3.
 ## Changelog
 
 ### 0.0.4
+
+- Adds in /assets/ext into the .gitignore
 - Adds in MySQL for Sequelize 
 - Adds in required Redux and Redux-Saga libraries
 
