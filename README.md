@@ -40,11 +40,7 @@ This seeder defines 3 environments: `production`, `test` and `development`.
 ### Project Initialisation
 Clone the repository from `git@github.com:zephinzer/cloudyday.git`.
 
-Change package information in `package.json` and `bower.json` for your own product.
-
-Create a repo of your own and change the remote so you'll be pushing to your own 
-repository. This can be done with: `git remote remove origin master` followed by 
-`git remote add origin <repo-url>`.
+Run `npm run init` to customise your repository.
 
 ### Project Setup
 
