@@ -11,8 +11,8 @@ describe(`${packageDetails.name} v${packageDetails.version}`, () => {
 		it('a seeder application for a React app', () => {
 			expect(packages.npm.dependencies['react']).to.not.be.undefined;
 		});
-		it('dependent on Node v6.9.2 LTS', () => {
-			expect(packages.npm.engines['node']).to.equal('6.9.2');
+		it('dependent on Node v6.9.4 LTS', () => {
+			expect(packages.npm.engines['node']).to.equal('6.9.4');
 		});
 		it('written by zephinzer out of frustration at the hassle needed to setup a React app', () => {
 			expect(packages.npm.contributors[0].name).to.contain('zephinzer');
@@ -175,7 +175,7 @@ describe(`${packageDetails.name} v${packageDetails.version}`, () => {
 			expect(packages.npm.scripts['test-eslint']).to.not.be.undefined;
 		});
 		it('npm run test-mocha  : runs all Mocha tests in ./test', () => {
-			expect(packages.npm.scripts['test-mocha']).to.not.be.undefined;
+			expect(packages.npm.scripts['test-back']).to.not.be.undefined;
 		});
 		it('npm run unmigrate   : reverses most recent Sequelize migration in /migrations', () => {
 			expect(packages.npm.scripts['unmigrate']).to.not.be.undefined;
