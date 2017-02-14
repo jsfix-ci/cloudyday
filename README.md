@@ -131,6 +131,10 @@ Thanks in advance!
 
 ### Changelog
 
+#### 0.2.2
+- Fixes bug where `yarn` is not installed, causing `npm run update` to fail when there 
+is no `yarn`.
+
 #### 0.2.1
 - Fixes bug where `.gitignore` file was not found.
 
