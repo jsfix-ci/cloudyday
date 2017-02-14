@@ -131,6 +131,9 @@ Thanks in advance!
 
 ### Changelog
 
+#### 0.2.1
+- Fixes bug where `.gitignore` file was not found.
+
 #### 0.2.0
 - Adds ability to globally install CloudyDay with `npm install -g cloudyday` and be 
 able to run the command `cloudyday` to create a new project with customisations included.
