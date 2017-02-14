@@ -1,7 +1,7 @@
 {
  "name": "cloudyday",
  "displayName": "Cloudy Day",
- "version": "0.1.0",
+ "version": "0.2.0",
  "description": "All ideas no execution: A seeder file for quick setting up of a React web-application.",
  "main": "index.js",
  "engines": {
