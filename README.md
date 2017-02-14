@@ -55,6 +55,13 @@ This seeder defines 3 environments: `production`, `test` and `development`.
 ## Getting Started
 
 ### Project Initialisation
+
+#### Global Installation
+Install the CloudDay package globally by using `npm install -g cloudyday`.
+
+Create a project by running `cloudyday` in any folder.
+
+#### Local Installation
 Clone the repository from `git@github.com:zephinzer/cloudyday.git`.
 
 Run `npm run init` to customise your repository.
