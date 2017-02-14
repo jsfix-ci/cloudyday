@@ -1,11 +1,31 @@
 #!/bin/sh
-echo This script will run 'yarn install' and 'bower install' to update dependencies.
-echo Now sleeping for 3 seconds. Hit ctrl+c to terminate if wrongly started.
+printf "This script will run 'yarn/npm install' and 'bower install' to update dependencies.\n"
+printf "Now sleeping for 3 seconds. Hit ctrl+c to terminate if wrongly started.\n"
 sleep 1
 echo .
 sleep 1
 echo .
 sleep 1
-echo Beginning dependency installation...
-yarn install && bower install
+printf "Beginning npm modules installation...\n"
+printf "Checking for Yarn... "
+YARN_EXISTENCE_CHECK=$(yarn --version)
+if [ "$?" -eq "0" ]
+then 
+	printf "Yarn found.\nProceeding using Yarn...\n"
+	yarn install
+else
+	read -r -p "Yarn not found but is recommended. Shall we install it? [y/N] " RESPONSE
+	case "$RESPONSE" in
+		[yY][eE][sS]|[yY]) 
+			npm install -g yarn
+			yarn install
+			;;
+		*)
+			printf "Proceeding using NPM...\n"
+			npm install
+			;;
+	esac
+fi
+
+bower install
 echo The Deed is Done\(:
