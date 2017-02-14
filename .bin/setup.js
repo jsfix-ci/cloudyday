@@ -62,8 +62,11 @@ prompt.get([{
 		}
 	} catch(ex) {
 		// fs.mkdirSync(DIRNAME);
-		const GIT_IGNORE = fs.readFileSync(path.join(CLOUDY_DAY_SOURCE, '/.gitignore')).toString().split('\n');
-		GIT_IGNORE.push('.git');
+		const GIT_IGNORE = [
+			'.git',
+			'node_modules',
+			'bower_components'
+		];
 		copydir(CLOUDY_DAY_SOURCE, DIRNAME, function(stat, filepath, filename) {
 			return (GIT_IGNORE.findIndex(fn => filename === fn) === -1);
 		}, function(err) {
