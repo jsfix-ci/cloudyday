@@ -5,6 +5,23 @@
 A React seeder app for my own convenience so that I can just clone this whenever I need
 to test out with some React. Clone it, install dependencies and you're good to go.
 
+## Quick Start
+
+1. Install CloudyDay globally with the command
+
+```
+npm install -g cloudyday
+```
+
+2. Use the following command to run the interactive guided mode to creating your own 
+project:
+
+```
+cloudyday
+```
+
+3. Start making something!
+
 ## What's Inside
 
 ### Server Management
@@ -106,6 +123,10 @@ Thanks in advance!
 - Create a globally accessible `cloudyday` command that creates a project for you.
 
 ### Changelog
+
+#### 0.2.0
+- Adds ability to globally install CloudyDay with `npm install -g cloudyday` and be 
+able to run the command `cloudyday` to create a new project with customisations included.
 
 #### 0.1.0
 - Adds in `npm run init` script to assist in creation of new project from the cloned
